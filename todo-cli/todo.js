@@ -27,11 +27,8 @@ const todoList = () => {
   const toDisplayableList = (list) => {
     let output = "";
     for (const item of list) {
-      output += `[${item.completed ? "x" : " "}] ${item.title}`;
-      output +=
-        item.dueDate === new Date().toISOString().split("T")[0]
-          ? ""
-          : ` ${item.dueDate}`;
+      output += `[${item.completed ? 'x' : ' '}] ${item.title}`;
+      output += item.dueDate === new Date().toISOString().split("T")[0] ? "" : ` ${item.dueDate}`;
       output += "\n";
     }
     return output;
